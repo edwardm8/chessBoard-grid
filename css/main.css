@@ -1,0 +1,27 @@
+/* Start by defining grid-template-columns on the container */
+section{ 
+  display: grid;
+  grid-template-columns: repeat(8, 100px);
+  grid-template-rows: repeat(8, 100px);
+}
+
+article{
+  background-color: black;
+}
+
+/* From https://stackoverflow.com/questions/67481134/how-to-create-chekerboard-using-nth-childoddeven-with-8x8-grid
+Goes through each row and chooses between odd or even. Since each row is alternating for even and odd. Also the boxes in the row are alternating as well.*/
+article:nth-child(-n + 8):nth-child(even),
+article:nth-child(n + 8):nth-child(-n + 16):nth-child(odd),
+article:nth-child(n + 17):nth-child(-n + 24):nth-child(even),
+article:nth-child(n + 25):nth-child(-n + 32):nth-child(odd),
+article:nth-child(n + 33):nth-child(-n + 40):nth-child(even),
+article:nth-child(n + 41):nth-child(-n + 48):nth-child(odd),
+article:nth-child(n + 49):nth-child(-n + 56):nth-child(even),
+article:nth-child(n + 57):nth-child(-n + 64):nth-child(odd){
+    background-color:white;
+}
+
+
+
+
