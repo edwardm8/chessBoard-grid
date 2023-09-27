@@ -3,10 +3,14 @@ section{
   display: grid;
   grid-template-columns: repeat(8, 100px);
   grid-template-rows: repeat(8, 100px);
+
+  border-style: solid;
+  width: fit-content;
 }
 
 article{
   background-color: black;
+  
 }
 
 /* From https://stackoverflow.com/questions/67481134/how-to-create-chekerboard-using-nth-childoddeven-with-8x8-grid
